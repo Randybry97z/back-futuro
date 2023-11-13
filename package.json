@@ -111,7 +111,7 @@
   "scripts": {
     "dev": "concurrently --kill-others \"npm run start\" \"npm run upServer\"",
     "upServer": "nodemon -r dotenv/config server.js --exec babel-node",
-    "start": "react-scripts start",
+    "start": "node -r dotenv/config lib/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
