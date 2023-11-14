@@ -15,13 +15,13 @@ export const getUsers = async (req, res) => {
 
 export const createUser = async (req, res) => {
   try {
-    const { user_email, user_password, user_name, user_paternal_surname, company_id, role_id, user_avatar, admin_mail } = req.body;
-    console.log(admin_mail);
+    const { user_email, user_password, user_name, user_paternal_surname, user_maternal_surname, company_id, role_id, user_avatar } = req.body;
     const usuario = await db.User.create({
       user_mail: user_email,
       user_password: await db.User.encryptPassword(user_password),
       user_name,
       user_lastName: user_paternal_surname,
+      user_maternalLastName: user_maternal_surname,
       company_id,
       role_id,
       user_avatar,
@@ -29,14 +29,14 @@ export const createUser = async (req, res) => {
     });
     if (usuario) {
       // get user admin to verified email
-      let admin = await db.User.findAll({ attributes: ['user_id', 'user_mail', 'user_name'], where: { user_mail: admin_mail } })
-      sendVerificationEmail(usuario, 1, admin[0])
+      // let admin = await db.User.findAll({ attributes: ['user_id', 'user_mail', 'user_name'], where: { user_mail: admin_mail } })
+      // sendVerificationEmail(usuario, 1, admin[0])
       res.status(201).json({ data: usuario, mensaje: 'Usuario agregado con exito', success: true });
     } else {
-      res.status(400).json({ mensaje: 'Ocurrio un error al crear el usuario', success: false });
+      res.status(400).json({mensaje: 'Ocurrio un error al crear el usuario', success: false });
     }
   } catch (error) {
-    res.status(400).json({ mensaje: 'Ocurrio un error al crear el usuario', success: false });
+    res.status(400).json({data:error, mensaje: 'Ocurrio un error al crear el usuario', success: false });
   }
 }
 
@@ -52,7 +52,7 @@ export const getUser = async (req, res) => {
       res.status(400).json({ mensaje: 'Usuario no encontrado', success: false });
     }
   } catch (error) {
-    res.status(400).json({ mensaje: 'Ocurrio un error al consultar los datos', success: false });
+    res.status(400).json({data:error, mensaje: 'Ocurrio un error al consultar los datos', success: false });
   }
 }
 
