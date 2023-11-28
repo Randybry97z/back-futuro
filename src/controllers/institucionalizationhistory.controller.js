@@ -65,6 +65,7 @@ export const createInstitutionalizationHistory = async (req, res) => {
     }
   } catch (error) {
     res.status(400).json({
+      error,
       mensaje: "Ocurrio un error al crear la historia de institucionalización",
       success: false,
     });

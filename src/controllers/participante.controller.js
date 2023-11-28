@@ -19,10 +19,29 @@ export const getParticipantes = async (req, res) => {
   }
 };
 
+export const getParticipantesByUser = async (req, res) => {
+  try {
+    const data = await db.Participante.findAll({
+      attributes: { exclude: ["participante_age"] },
+      include: [{ model: db.User, attributes: ["user_name"] }],
+      where: { user_id: req.params.user_id },
+    });
+    res
+      .status(200)
+      .json({ data, mensaje: "Operación realizada con exito", success: true });
+  } catch (error) {
+    res
+      .status(400)
+      .json({
+        mensaje: "Ocurrio un error al consultar los datos",
+        success: false,
+      });
+  }
+};
+
 export const createParticipante = async (req, res) => {
   try {
     const {
-      participante_id,
       participante_name,
       participante_lastname,
       participante_second_surname,
@@ -38,7 +57,6 @@ export const createParticipante = async (req, res) => {
       user_id,
     } = req.body;
     const participante = await db.Participante.create({
-      participante_id,
       participante_name,
       participante_lastname,
       participante_second_surname,
@@ -74,6 +92,7 @@ export const createParticipante = async (req, res) => {
       .status(400)
       .json({
         mensaje: "Ocurrio un error al crear el participante",
+        error: error,
         success: false,
       });
   }
@@ -83,7 +102,7 @@ export const getParticipante = async (req, res) => {
   try {
     const participante = await db.Participante.findByPk(req.params.id, {
       attributes: { exclude: ["participante_age"] },
-      include: [{ model: db.User, attributes: ["user_name"] }],
+      include: [{ model: db.User, attributes: ["user_name"] }, {model: db.Entity}, {model: db.InstitutionalizationHistory}],
     });
     if (participante) {
       res

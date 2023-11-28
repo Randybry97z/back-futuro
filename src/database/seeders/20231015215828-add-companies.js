@@ -5,14 +5,6 @@ module.exports = {
   async up (queryInterface, _Sequelize) {
     await queryInterface.bulkInsert('company', [
       {
-        company_name: 'futuroCO',
-        company_description: 'futuroCO SA de CV',
-        company_address: 'CDMX',
-        company_code: 'FCO-123',
-        company_createdAt: new Date(),
-        company_updatedAt: new Date()
-      },
-      {
         company_name: 'Albergue Covadonga',
         company_description: 'Albergue Covadonga',
         company_address: '',

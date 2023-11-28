@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `answer` (
   `answer_createdAt` timestamp NULL DEFAULT NULL,
   `answer_updatedAt` timestamp NULL DEFAULT NULL,
   `answer_deletedAt` timestamp NULL DEFAULT NULL,
-  `participante_id` int(11) NOT NULL,
+  `participante_id` VARCHAR(150) NOT NULL,
   `question_id` int(11) NOT NULL,
   PRIMARY KEY (`answer_id`),
   KEY `FK_answer_question` (`question_id`),
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `entity` (
   `entity_representative_name` varchar(150) DEFAULT NULL,
   `entity_representative_mail` varchar(150) DEFAULT NULL,
   `entity_representative_phone` varchar(150) DEFAULT NULL,
-  `participante_id` int(11) NOT NULL,
+  `participante_id` VARCHAR(150) NOT NULL,
   PRIMARY KEY (`entity_id`),
   KEY `FK__participante` (`participante_id`),
   CONSTRAINT `FK__participante` FOREIGN KEY (`participante_id`) REFERENCES `participante` (`participante_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `institutionalization_history` (
   `history_register_date` varchar(100) NOT NULL,
   `history_updown_date` varchar(100) NOT NULL,
   `history_updown_reason` varchar(100) NOT NULL,
-  `participante_id` int(11) NOT NULL,
+  `participante_id` VARCHAR(150) NOT NULL,
   PRIMARY KEY (`history_id`),
   KEY `FK_institutionalization_history_participante` (`participante_id`),
   CONSTRAINT `FK_institutionalization_history_participante` FOREIGN KEY (`participante_id`) REFERENCES `participante` (`participante_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `institutionalization_history` (
 
 -- Volcando estructura para tabla futuroco.participante
 CREATE TABLE IF NOT EXISTS `participante` (
-  `participante_id` int(11) NOT NULL AUTO_INCREMENT,
+  `participante_id` VARCHAR(150) NOT NULL AUTO_INCREMENT,
   `participante_name` varchar(150) NOT NULL,
   `participante_lastname` varchar(150) DEFAULT NULL,
   `participante_second_surname` varchar(150) DEFAULT NULL,

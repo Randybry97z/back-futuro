@@ -5,7 +5,7 @@ module.exports = {
   async up (queryInterface, _Sequelize) {
     await queryInterface.bulkInsert('question', [
       {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Tecnico/a de referencia',
         question_type: 'abierta',
         question_options: '',
@@ -13,17 +13,9 @@ module.exports = {
         question_group: 'Equipo',
         question_createdAt: new Date(),
         question_updatedAt: new Date()
-      }, {
-        form_id: 1,
-        question_text: 'Correo Tecnico/a de referencia',
-        question_type: 'abierta',
-        question_options: '',
-        question_width: 3,
-        question_group: 'Equipo',
-        question_createdAt: new Date(),
-        question_updatedAt: new Date()
-      }, {
-        form_id: 1,
+      },
+      {
+        form_id: 3,
         question_text: 'Teléfono Tecnico/a de referencia',
         question_type: 'abierta',
         question_options: '',
@@ -32,7 +24,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Responsable Equipo/Coordinación',
         question_type: 'abierta',
         question_options: '',
@@ -41,7 +33,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Correo Responsable Equipo/Coordinación',
         question_type: 'abierta',
         question_options: '',
@@ -50,7 +42,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Teléfono Responsable Equipo/Coordinación',
         question_type: 'abierta',
         question_options: '',
@@ -59,7 +51,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Grado de colectividad de la vivienda',
         question_type: 'multiple',
         question_options: '["Vivienda (2-6 habitaciones) con habitación individual","Vivienda (2-6 habitaciones) compartiendo habitación","Residencial (más de 6 habitaciones) con habitación individual","Residencial (más de 6 habitaciones) compartiendo habitación"]',
@@ -68,7 +60,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Grado de intermitencia de apoyos',
         question_type: 'multiple',
         question_options: '["Presencia permanente/diaria","Presencia semanal/quincenal pautada (informada)", "Presencia semanal/quincenal no pautada","Presencia solamente a solicitud de participantes"]',
@@ -77,7 +69,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Grado de autonomía en la economía doméstica',
         question_type: 'multiple',
         question_options: '["Gestión de la alimentación organizada desde la entidad","Gestión de la alimentación autónoma"]',
@@ -86,7 +78,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Copago',
         question_type: 'multiple',
         question_options: '["Sí","No, no ha cumplido criterios para pago","No"]',
@@ -95,7 +87,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Identidad jurídica',
         question_type: 'multiple',
         question_options: '["Persona en situación irregular","Persona bajo alguna condición de protección de duración menor a un año","Persona bajo alguna condición de protección de duración superior a un año","Persona en situación regular “permanente”"]',
@@ -104,7 +96,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Apoyos - Atención Psicológica',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -113,7 +105,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Apoyos - Asesoramiento Jurídico',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -122,7 +114,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Apoyos - Itinerario Formativo Laboral',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -131,7 +123,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Plan de mentoría',
         question_type: 'multiple',
         question_options: '["Si, completado según compromiso","Si, con cierre anticipado","No"]',
@@ -140,7 +132,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Participación - Asambleas convivenciales',
         question_type: 'multiple',
         question_options: '["Siempre o casi siempre","Ocasionalmente","Nunca o casi nunca"]',
@@ -149,7 +141,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Participación - Ocio Individual',
         question_type: 'multiple',
         question_options: '["Si, habitualmente","Ocasionalmente","Nunca o casi nunca"]',
@@ -158,7 +150,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Participación - Ocio Grupal',
         question_type: 'multiple',
         question_options: '["Si, habitualmente","Ocasionalmente","Nunca o casi nunca"]',
@@ -167,7 +159,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Participación - Grupo de jóvenes',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -176,7 +168,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Incipit - Mapeo',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -185,7 +177,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Incipit - Collage',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -194,7 +186,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Incipit - Bueno para pensar',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -203,7 +195,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Ruit - Disco Forum',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -212,7 +204,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Ruit - Carpe Diem',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -221,7 +213,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Ruit - Ecomapa',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -230,7 +222,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Exit - Línea de futuro',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -239,7 +231,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Exit - Podcast',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -248,7 +240,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Autonarrativas - Exit -Contextualización de cierre',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -257,7 +249,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Voluntariado',
         question_type: 'multiple',
         question_options: '["Si, de manera estable","Si, en acciones puntuales","No"]',
@@ -266,7 +258,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Salud - Pactos de cuidados',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -275,7 +267,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Salud - Mapas del Alma',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -284,7 +276,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Salud - Taller de cuidados',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -293,7 +285,7 @@ module.exports = {
         question_createdAt: new Date(),
         question_updatedAt: new Date()
       }, {
-        form_id: 1,
+        form_id: 3,
         question_text: 'Salud - Mapas corporales',
         question_type: 'multiple',
         question_options: '["Si","No"]',
@@ -306,7 +298,7 @@ module.exports = {
       //MATRIZ MEDDI QUESTIONS
       //QUESTIONS TAB 1
       {
-        form_id: 2,
+        form_id: 4,
         question_text: '1. Siento que soy una persona digna de aprecio, al menos en igual medida que los demás.',
         question_type: 'multiple',
         question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -318,7 +310,7 @@ module.exports = {
         question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2. Estoy convencido/a de que tengo cualidades buenas.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -330,7 +322,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '3.Soy capaz de hacer las cosas tan bien como la mayoría de la gente.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -342,7 +334,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '4.Tengo una actitud positiva hacia mí mismo/a.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -354,7 +346,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '5.En general, estoy satisfecho/a de mí mismo/a.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -366,7 +358,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '6. Siento que no tengo mucho de lo que estar orgulloso/a.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -378,7 +370,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '7. En general, me inclino a pensar que soy un fracasado/a.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -390,7 +382,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '8. Me gustaría poder sentir más respeto por mí mismo/a.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -402,7 +394,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '9. Hay veces que realmente pienso que soy un/a inútil',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -414,7 +406,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '10. A veces creo que no soy buena persona.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -427,7 +419,7 @@ module.exports = {
     },
     //QUESTIONS TAB 2
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Expectativas desajustadas","Expectativas poco ajustadas","Expectativas moderadamente ajustadas","Expectativas ajustadas"]',
@@ -463,7 +455,7 @@ module.exports = {
     },
     //QUESTIONS TAB 3
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Indefensión","Indefensión Moderada","Indefensión Baja","Capacidad de Agencia"]',
@@ -498,7 +490,7 @@ module.exports = {
     },
     //QUESTIONS TAB 4
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1. He sentido que no tengo la misma motivación para hacer las cosas como anteriormente hacía',
       question_type: 'multiple',
       question_options: '["Nunca lo pienso, hago o siento","","","Todo el tiempo lo pienso, hago o siento"]',
@@ -510,7 +502,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2. Tiendo a posponer o envitar compromisos y responsabilidades',
       question_type: 'multiple',
       question_options: '["Nunca lo pienso, hago o siento","","","Todo el tiempo lo pienso, hago o siento"]',
@@ -522,7 +514,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '3. Me he sentido incapaz de cumplir o hacer las tareas más simples en mi vida',
       question_type: 'multiple',
       question_options: '["Nunca lo pienso, hago o siento","","","Todo el tiempo lo pienso, hago o siento"]',
@@ -534,7 +526,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '4.He dejado dehacer cosas porque pienso que no valen la pena o no son placenteras',
       question_type: 'multiple',
       question_options: '["Nunca lo pienso, hago o siento","","","Todo el tiempo lo pienso, hago o siento"]',
@@ -547,7 +539,7 @@ module.exports = {
     },
     //QUESTIONS TAB 5
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Mal manejo de la incertidumbre","Baja tolerancia a la incertidumbre","Tolerancia media a la incertidumbre","Alta tolerancia a la incertidumbre"]',
@@ -582,7 +574,7 @@ module.exports = {
     },
     //QUESTIONS TAB 6
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Conductas no saludables","Numerosa frecuencia de conductas no saludables","Conductas saludables en general","Conductas saludables"]',
@@ -617,7 +609,7 @@ module.exports = {
     },
     //QUESTIONS TAB 7
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.Busco formas creativas de enfrentarme a las situaciones difíciles',
       question_type: 'multiple',
       question_options: '["No refleja en absoluto una reacción tipica en mi (nunca)","","""Refleja mi forma habitual de responder (siempre)"]',
@@ -629,7 +621,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.No importa lo que me ocurra, confío en que puedo controlar mi reacción.',
       question_type: 'multiple',
       question_options: '["No refleja en absoluto una reacción tipica en mi (nunca)","","""Refleja mi forma habitual de responder (siempre)"]',
@@ -641,7 +633,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '3.Creo que puedo aprender cosas positivas cuando afronto situaciones difíciles.',
       question_type: 'multiple',
       question_options: '["No refleja en absoluto una reacción tipica en mi (nunca)","","""Refleja mi forma habitual de responder (siempre)"]',
@@ -653,7 +645,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '4.Busco de forma activa la forma de reemplazar las pérdidas que encuentro en la vida.',
       question_type: 'multiple',
       question_options: '["No refleja en absoluto una reacción tipica en mi (nunca)","","""Refleja mi forma habitual de responder (siempre)"]',
@@ -666,7 +658,7 @@ module.exports = {
     },
     //QUESTIONS TAB 8
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.Encuentro fortaleza en mi religión o espiritualidad',
       question_type: 'multiple',
       question_options: '["Nunca o casi Nunca","De vez en cuando","Bastantes veces","Siempre o casi siempre"]',
@@ -678,7 +670,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.Siento profunda paz o armonía interior',
       question_type: 'multiple',
       question_options: '["Nunca o casi Nunca","De vez en cuando","Bastantes veces","Siempre o casi siempre"]',
@@ -690,7 +682,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '3.Acepto a los/las demás incluso cuando hacen cosas que pienso que están mal',
       question_type: 'multiple',
       question_options: '["Nunca o casi Nunca","De vez en cuando","Bastantes veces","Siempre o casi siempre"]',
@@ -703,7 +695,7 @@ module.exports = {
     },
     //QUESTIONS TAB 9
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.¿Tienes firma o certificado electrónico?',
       question_type: 'multiple',
       question_options: '["No, no lo conozco, no lo veo útil","No, porque no puedo por mi situación administrativa","Sí o en trámite","Sí, y lo utilizo habitualmente de manera autónoma"]',
@@ -715,7 +707,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.¿Has utilizado o utilizas medios digitales para hacer algún trámite con las administraciones públicas?',
       question_type: 'multiple',
       question_options: '["No, ni sabía que se podía o nunca lo he necesitado","Lo necesité pero no pude","Sí, pero hicieron el trámite por mí","Sí"]',
@@ -728,7 +720,7 @@ module.exports = {
     },
     //QUESTIONS TAB 10
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Nula conciencia de ciudadanía","Baja conciencia de ciudadanía","Moderada conciencia de ciudadanía","Alta conciencia de ciudadanía"]',
@@ -763,7 +755,7 @@ module.exports = {
     },
     //QUESTIONS TAB 11
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Irrelevancia de la pertenencia a grupos en la identidad","Baja relevancia de la pertenencia a grupos en la identidad","Moderada relevancia de la pertenencia a grupos en la identidad","Alta relevancia de la pertenencia a grupos en la identidad"]',
@@ -800,7 +792,7 @@ module.exports = {
     },
     //QUESTIONS TAB 12
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Incapacidad para manejar las normas","Problemas significativos en el manejo de las normas","Problemas menores en el manejo de las normas","Adecuado manejo de las normas"]',
@@ -836,7 +828,7 @@ module.exports = {
     },
     //QUESTIONS TAB 13
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Espacio no seguro","Espacio poco seguro","Espacio seguro","Espacio propio"]',
@@ -870,7 +862,7 @@ module.exports = {
     },
     //QUESTIONS TAB 14
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Sin sentido de pertenencia","Bajo sentido de pertenencia","Moderado sentido de pertenencia","Alto sentido de pertenencia"]',
@@ -905,7 +897,7 @@ module.exports = {
     },
     //QUESTIONS TAB 15
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Sin garantía de ingresos","Garantía de ingresos baja","Garantía de ingresos moderada","Garantía de ingresos alta"]',
@@ -937,7 +929,7 @@ module.exports = {
     },
     //QUESTIONS TAB 16
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.Me siento identificado/a con mi comunidad/barrio.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -949,7 +941,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.Mis opiniones son bien recibidas en mi barrio o mi comunidad',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -961,7 +953,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '3.Siento el barrio como algo mío.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -973,7 +965,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '4.Colaboro en las organizaciones y asociaciones de mi comunidad.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -985,7 +977,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '5.Participo en actividades sociales de mi barrio.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -997,7 +989,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '6.Participo en algún grupo social o cívico.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -1009,7 +1001,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '7.Acudo a las llamadas de apoyo que se hacen dentro de mi comunidad.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -1021,7 +1013,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '8.Si tuviera problemas (personales, familiares, etc.) podría encontrar personas en estas organizaciones que me ayudarían a resolverlos.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -1033,7 +1025,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '9.Estas organizaciones y servicios son una importante fuente de apoyo.',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -1045,7 +1037,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '10.En caso de necesidad acudiría a estas organizaciones',
       question_type: 'multiple',
       question_options: '["Muy en desacuerdo","En desacuerdo","De acuerdo","Muy de acuerdo"]',
@@ -1058,7 +1050,7 @@ module.exports = {
     },
     //QUESTIONS TAB 17
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Sin uso de redes sociales","Uso pasivo de redes sociales para entretenimiento","Uso activo de las redes, pero en el plano del entretenimiento","Uso activo y vinculado a un proceso de emancipación"]',
@@ -1092,7 +1084,7 @@ module.exports = {
     },
     //QUESTIONS TAB 18
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Poca gestión del ocio","Limitada gestión del ocio","Moderada Gestión del ocio","Buena gestión del ocio"]',
@@ -1126,7 +1118,7 @@ module.exports = {
     },
     //QUESTIONS TAB 19
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.¿Cuántas personas son tan cercanas a ti que podrías contar con ellas si tuvieras problemas serios?',
       question_type: 'multiple',
       question_options: '["Ninguna","Una o dos personas","De tres a cinco personas","Seis personas o más"]',
@@ -1138,7 +1130,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.¿Cuánto interés muestra la gente de tu entorno por aquello que te pasa o haces?',
       question_type: 'multiple',
       question_options: '["Ningún interés","Poco interés","Bastante interés","Mucho interés"]',
@@ -1150,7 +1142,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '3.¿Cómo de fácil te resultaría obtener ayuda de las personas de tu entorno si llegaras a necesitarla?',
       question_type: 'multiple',
       question_options: '["Muy difícil","Difícil","Fácil","Muy fácil"]',
@@ -1162,7 +1154,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '4.¿A quién acudes cuando tienes un problema personal?',
       question_type: 'multiple',
       question_options: '["Familia","Amistades""Profesionales de este recurso o entidad","Profesionales de otras entidades o recursos","Profesionales de servicios sociales públicos","Referente espiritual (Cura, monja, Imán, etc.)","Profesionales sanitarios","Pareja","A nadie. No cuento con personas que me puedan ayudar"]',
@@ -1175,7 +1167,7 @@ module.exports = {
     },
     //QUESTIONS TAB 20
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Nula capacidad de acceso a una vivienda / habitación","Baja capacidad de acceso a una vivienda / habitación","Capacidad moderada de acceso a una vivienda / habitación","Alta capacidad de acceso a una vivienda / habitación"]',
@@ -1211,7 +1203,7 @@ module.exports = {
     },
     //QUESTIONS TAB 21
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Mala convivencia vecinal","Problemas significativos por los cuales la convivencia no es la deseable","Problemas menores por los cuales la convivencia no es la deseable","Adecuada convivencia vecinal"]',
@@ -1251,7 +1243,7 @@ module.exports = {
     },
     //QUESTIONS TAB 22
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.Habitualmente, ¿dispones de acceso a internet a través de cualquier dispositivo (¿ordenador, Tablet, etc.)?',
       question_type: 'multiple',
       question_options: '["No, pero creo que eso no me complica el día a día","No, y es algo que me complica el día a día (para estar en contacto con mi familia, para buscar trabajo, hacer trámites, etc.)","Sí, pero no siempre","Sí, habitualmente"]',
@@ -1263,7 +1255,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.¿Dispones conexión en tu teléfono móvil?',
       question_type: 'multiple',
       question_options: '["No, pero creo que no lo necesito","No, y siento que la necesito para el día a día","Sí, pero solo mediante wifi (solo cuando se engancha a una red)","Sí, con datos"]',
@@ -1276,7 +1268,7 @@ module.exports = {
     },
     //QUESTIONS TAB 23
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Nivel A1","Nivel A2","Nivel B1","Nivel B2 o superior o lengua nativa"]',
@@ -1300,7 +1292,7 @@ module.exports = {
     },
     //QUESTIONS TAB 24
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.¿Qué situación administrativa tienes?',
       question_type: 'multiple',
       question_options: '["Permiso de trabajo","No tengo permiso de trabajo"]',
@@ -1313,7 +1305,7 @@ module.exports = {
     },
     //QUESTIONS TAB 25
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Sin garantía de ingresos y con empleabilidad muy baja","Garantía de ingresos y  empleabilidad baja","Garantía de ingresos y empleabilidad moderada","Garantía de ingresos y empleabilidad alta",]',
@@ -1347,7 +1339,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Sin garantía de ingresos y con empleabilidad muy baja","Garantía de ingresos y  empleabilidad baja","Garantía de ingresos y empleabilidad moderada","Garantía de ingresos y empleabilidad alta"]',
@@ -1370,7 +1362,7 @@ module.exports = {
     },
     //QUESTIONS TAB 26
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Aprendizaje sin interés","Aprendizaje que requiere apoyos","Aprendizaje autónomo desorganizado","Aprendizaje eficaz y autónomo desorganizado"]',
@@ -1408,7 +1400,7 @@ module.exports = {
     },
     //QUESTIONS TAB 27
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Nulo conocimiento y manejo del entono","Bajo conocimiento y manejo del entorno","Moderada conocimiento y manejo del entorno","Alta conocimiento y manejo del entorno"]',
@@ -1446,7 +1438,7 @@ module.exports = {
     },
     //QUESTIONS TAB 28
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Nula capacidad de gestión económica personal","Baja capacidad de gestión económica personal","Moderada capacidad de gestión económica personal","Alta capacidad de gestión económica personal"]',
@@ -1482,7 +1474,7 @@ module.exports = {
     },
     //QUESTIONS TAB 29
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Dependencia en la interacción con las administraciones","Baja autonomía","Moderada autonomía","Alta autonomía"]',
@@ -1519,7 +1511,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Rec. Formativos,educativos',
       question_type: 'multiple',
       question_options: '["Alta Dependencia","Baja Autonomia","Autonomá Moderada","Alta Autonomía"]',
@@ -1531,7 +1523,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Rec. sanitarios',
       question_type: 'multiple',
       question_options: '["Alta Dependencia","Baja Autonomia","Autonomá Moderada","Alta Autonomía"]',
@@ -1543,7 +1535,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Rec. Atención social',
       question_type: 'multiple',
       question_options: '["Alta Dependencia","Baja Autonomia","Autonomá Moderada","Alta Autonomía"]',
@@ -1555,7 +1547,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Rec. jurídicos',
       question_type: 'multiple',
       question_options: '["Alta Dependencia","Baja Autonomia","Autonomá Moderada","Alta Autonomía"]',
@@ -1567,7 +1559,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Rec. laborales',
       question_type: 'multiple',
       question_options: '["Alta Dependencia","Baja Autonomia","Autonomá Moderada","Alta Autonomía"]',
@@ -1580,7 +1572,7 @@ module.exports = {
     },
     //QUESTIONS TAB 30
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Conciencia de ciudadanía dependiente de una institución","Baja conciencia de desinstitucionalización","Moderada conciencia de desinstitucionalización","Conciencia de ciudadanía vinculada a la comunidad"]',
@@ -1617,7 +1609,7 @@ module.exports = {
     },
     //QUESTIONS TAB 31
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Me sucede MUY POCAS veces","Me sucede ALGUNAS veces","Me sucede BASTANTES veces","Me sucede MUCHAS veces"]',
@@ -1654,7 +1646,7 @@ module.exports = {
     },
     //QUESTIONS TAB 32
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Relaciones fuertemente marcadas por la desigualdad de género","Relaciones marcadas por la desigualdad de género","Relaciones moderadamente marcadas por la desigualdad de género","Relaciones igualitarias"]',
@@ -1693,7 +1685,7 @@ module.exports = {
     },
     //QUESTIONS TAB 33
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["Muy deficientes habilidades domésticas","Deficiencias en las habilidades domésticas","Pocas deficiencias en las habilidades domésticas","Adecuadas habilidades domésticas"]',
@@ -1734,7 +1726,7 @@ module.exports = {
     },
     //QUESTIONS TAB 34
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '1.¿En qué medida te sientes capaz de colaborar en la elaboración de las normas de convivencia de tu piso/residencia?',
       question_type: 'multiple',
       question_options: '["Nada","Poco","Bastante","Mucho"]',
@@ -1746,7 +1738,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: '2.¿En qué grado te sientes capaz de tomar decisiones y gestionar tu día a día en tu casa/piso/residencia?',
       question_type: 'multiple',
       question_options: '["Nada","Poco","Bastante","Mucho"]',
@@ -1758,7 +1750,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'He participado en la elaboración de las normas de convivencia en el piso/residencia',
       question_type: 'multiple',
       question_options: '["0. Muy insatisfecho","1. Insatisfecho","2. Satisfecho","3. Muy Satisfecho"]',
@@ -1770,7 +1762,7 @@ module.exports = {
       question_updatedAt: new Date()
     },
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Estoy satisfecho con la forma en la que se toman de decisiones en mi piso/residencias',
       question_type: 'multiple',
       question_options: '["0. Muy insatisfecho","1. Insatisfecho","2. Satisfecho","3. Muy Satisfecho"]',
@@ -1783,7 +1775,7 @@ module.exports = {
     },
     //QUESTIONS TAB 35
     {
-      form_id: 2,
+      form_id: 4,
       question_text: 'Seleccione la opcion según el resultado:',
       question_type: 'multiple',
       question_options: '["No expresa proyecto de vivienda de salida","Dependencia para formular la salida","Autonomía limitada para la gestión de vivienda de salida","Autonomía en la gestión de su vivienda de salida"]',

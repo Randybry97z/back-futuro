@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   }
+  const currentDate = new Date();
   Answer.init({
     answer_id: {
       primaryKey: true,
@@ -22,6 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     answer_value: {
       type: DataTypes.TEXT,
       allowNull: false
+    },
+    answer_createdAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue:`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`
     }
   }, {
     sequelize,
@@ -29,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'answer',
     timestamps: true,
     paranoid: true,
-    createdAt: 'answer_createdAt',
+    createdAt: false,
     updatedAt: 'answer_updatedAt',
     deletedAt: 'answer_deletedAt',
   });

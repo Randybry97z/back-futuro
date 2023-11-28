@@ -1,4 +1,4 @@
-import db from '../database/models';
+import db, { sequelize } from '../database/models';
 
 export const getAnswers = async (req, res) => {
   try {
@@ -8,6 +8,20 @@ export const getAnswers = async (req, res) => {
     res.status(200).json({ data, mensaje: 'Operación realizada con exito', success: true });
   } catch (error) {
     res.status(400).json({ mensaje: 'Ocurrio un error al consultar los datos', success: false });
+  }
+}
+
+export const getAnswersByParticipant = async (req, res) => {
+  try {
+    const data = await db.Answer.findAll({
+      include: [{ model: db.Question, attributes: ['form_id'] }],
+      attributes: [[sequelize.fn('date', sequelize.col('answer_createdAt')), 'answer_createdAt']],
+      where: {participante_id: req.params.id},
+      group: [[sequelize.fn('date', sequelize.col('answer_createdAt')), 'answer_createdAt']]
+    });
+    res.status(200).json({ data, mensaje: 'Operación realizada con exito', success: true });
+  } catch (error) {
+    res.status(400).json({ error, mensaje: 'Ocurrio un error al consultar los datos', success: false });
   }
 }
 

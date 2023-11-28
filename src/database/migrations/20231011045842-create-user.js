@@ -52,10 +52,10 @@ module.exports = {
         allowNull: true,
         type: Sequelize.DATE
       },
-      verified: {
+      user_verified: {
         allowNull: false,
         defaultValue: false,
-        type: Sequelize.BOOLEAN
+        type: Sequelize.INTEGER
       },
       user_createdAt: {
         allowNull: false,

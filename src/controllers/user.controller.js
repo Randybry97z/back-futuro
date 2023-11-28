@@ -27,6 +27,7 @@ export const createUser = async (req, res) => {
       user_avatar,
       user_verified: 0
     });
+    res.status(201).json({ data: usuario, mensaje: 'Usuario agregado con exito', success: true });
     if (usuario) {
       // get user admin to verified email
       // let admin = await db.User.findAll({ attributes: ['user_id', 'user_mail', 'user_name'], where: { user_mail: admin_mail } })
@@ -42,10 +43,11 @@ export const createUser = async (req, res) => {
 
 export const getUser = async (req, res) => {
   try {
-    const usuario = await db.User.findByPk(req.params.id, {
-      attributes: { exclude: ['user_password'] },
-      include: [{ model: db.Role, attributes: ['role_name'] }]
-    });
+    let requestModels = req.query.include;
+    if (requestModels) requestModels = requestModels.split(',');
+    const includedModels = [{ model: db.Role, attributes: ['role_name'] }];
+    if (requestModels.length) requestModels.map(model => { includedModels.push({ model: db[model] }) });
+    const usuario = await db.User.findByPk(req.params.id, { attributes: { exclude: ['user_password'] }, include: includedModels });
     if (usuario) {
       res.status(200).json({ data: usuario, mensaje: 'Operación realizada con exito', success: true });
     } else {
@@ -58,13 +60,20 @@ export const getUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   try {
-    const usuario = await db.User.update(req.body, { where: { user_id: req.params.id } });
+    const usuario = await db.User.update({
+      user_name: req.body.user_name,
+      user_lastName: req.body.user_lastName,
+      user_maternalLastName: req.body.user_maternalLastName,
+      user_birthday: req.body.user_birthday,
+      user_avatar: req.body.user_avatar
+    }, { where: { user_id: req.params.id } });
     if (usuario[0]) {
       res.status(200).json({ mensaje: 'Usuario actualizado con exito', success: true });
     } else {
       res.status(400).json({ mensaje: 'No existe el usuario', success: false });
     }
   } catch (error) {
+    console.log(error);
     res.status(400).json({ mensaje: 'Ocurrio un error al actualizar los datos', success: false });
   }
 }
@@ -108,13 +117,10 @@ export const updatePasswordForgotten = async (req, res) => {
 export const deleteUser = async (req, res) => {
   try {
     const { id, adminId } = req.params;
-    console.log("delete-params:", adminId, id);
     // get adminInfo to deleted email
     let admin = await db.User.findAll({ attributes: ['user_id', 'user_mail', 'user_name'], where: { user_id: adminId } });
-    console.log(admin.length);
     // get userInfo to deleted email
     let usuario = await db.User.findAll({ attributes: ['user_id', 'user_mail', 'user_name'], where: { user_id: id } });
-    console.log(usuario.length);
     if (usuario.length > 0 && admin.length > 0) {
       sendVerificationEmail(usuario[0], 0, admin[0])
       res.status(200).json({ mensaje: 'Se ha mandado la verificación para eliminar.', success: true });

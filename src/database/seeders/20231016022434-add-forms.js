@@ -5,7 +5,7 @@ module.exports = {
   async up(queryInterface, _Sequelize) {
     await queryInterface.bulkInsert('form', [
       {
-        user_id: 1,
+        user_id: 3,
         form_name: 'Sistema de apoyos',
         form_description: 'Formulario para registro de sistema de apoyos',
         form_departamento: 'Departamento de prueba',
@@ -14,7 +14,7 @@ module.exports = {
         form_updatedAt: new Date()
       },
       {
-        user_id: 1,
+        user_id: 3,
         form_name: 'Matriz MEDDI',
         form_description: 'Formulario para registro de la matriz MEDDI',
         form_departamento: 'Departamento de prueba',

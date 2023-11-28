@@ -43,6 +43,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       max: 150
     },
+    user_maternalLastName: {
+      type: DataTypes.STRING,
+      max: 150
+    },
     user_mail: {
       type: DataTypes.STRING,
       max: 150
@@ -50,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
     user_password: DataTypes.TEXT,
     user_avatar: DataTypes.TEXT,
     user_birthday: DataTypes.DATE,
-    user_verified: DataTypes.STRING
+    user_verified: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',
