@@ -10,7 +10,6 @@ export const getAnswers = async (req, res) => {
     res.status(400).json({ mensaje: 'Ocurrio un error al consultar los datos', success: false });
   }
 }
-
 export const getAnswersByPid = async (req, res) => {
   try {
     const data = await db.Answer.findAll({
@@ -26,9 +25,9 @@ export const getAnswersByParticipant = async (req, res) => {
   try {
     const data = await db.Answer.findAll({
       include: [{ model: db.Question, attributes: ['form_id'] }],
-      attributes: [[sequelize.fn('date', sequelize.col('answer_createdAt')), 'answer_createdAt']],
+      // attributes: [[sequelize.fn('date', sequelize.col('answer_createdAt')), 'answer_createdAt']],
       where: {participante_id: req.params.id},
-      group: [[sequelize.fn('date', sequelize.col('answer_createdAt')), 'answer_createdAt']]
+      // group: [[sequelize.fn('date', sequelize.col('answer_createdAt')), 'answer_createdAt']]
     });
     res.status(200).json({ data, mensaje: 'Operación realizada con exito', success: true });
   } catch (error) {
@@ -38,8 +37,8 @@ export const getAnswersByParticipant = async (req, res) => {
 
 export const createAnswer = async (req, res) => {
   try {
-    const { participante_id, question_id, answer_value, answer_createdAt } = req.body;
-    const answer = await db.Answer.create({ participante_id, question_id, answer_value, answer_createdAt });
+    const { participante_id, question_id, answer_value } = req.body;
+    const answer = await db.Answer.create({ participante_id, question_id, answer_value });
     if (answer) {
       res.status(201).json({ data: answer, mensaje: 'Respuesta agregada con exito', success: true });
     } else {
