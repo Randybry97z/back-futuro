@@ -117,6 +117,29 @@ export const updateEntity = async (req, res) => {
   }
 };
 
+export const patchEntity = async (req, res) => {
+  try {
+    const entity = await db.Entity.update(req.body, {
+      where: { entity_id: req.params.id },
+    });
+    if (entity[0]) {
+      res
+        .status(200)
+        .json({ mensaje: "Entidad actualizada con exito", success: true });
+    } else {
+      res.status(400).json({ mensaje: "No existe la entidad", success: false });
+    }
+  } catch (error) {
+    res
+      .status(400)
+      .json({
+        mensaje: "Ocurrio un error al actualizar los datos",
+        error,
+        success: false,
+      });
+  }
+};
+
 export const deleteEntity = async (req, res) => {
   try {
     const entity = await db.Entity.destroy({
