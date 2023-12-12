@@ -11,6 +11,17 @@ export const getAnswers = async (req, res) => {
   }
 }
 
+export const getAnswersByPid = async (req, res) => {
+  try {
+    const data = await db.Answer.findAll({
+      where: { participante_id: req.params.id },
+    });
+    res.status(200).json({ data, mensaje: 'Operación realizada con exito', success: true });
+  } catch (error) {
+    res.status(400).json({ mensaje: 'Ocurrio un error al consultar los datos', success: false });
+  }
+}
+
 export const getAnswersByParticipant = async (req, res) => {
   try {
     const data = await db.Answer.findAll({
@@ -84,6 +95,33 @@ export const createAnswers = async (req, res) => {
     const result = await Promise.all(req.body.map(async ({ participante_id, question_id, answer_value }) => {
       const [answer, created] = await db.Answer.findOrCreate({
         where: { participante_id, question_id },
+        defaults: { participante_id, question_id, answer_value }
+      });
+      if (!created) {
+        if (answer.answer_value !== answer_value) {
+          const updated = await db.Answer.update({ answer_value }, { where: { answer_id: answer.answer_id } });
+          if (updated[0]) updates++;
+        }
+      }
+      return created;
+    }))
+    if (result) {
+      let added = result.filter(opt => opt).length;
+      res.status(201).json({ mensaje: `Se guard${added === 1 ? 'o' : 'aron'}: ${added} respuesta${added !== 1 ? 's' : ''}, se actualiz${updates === 1 ? 'o' : 'aron'}: ${updates} respuesta${updates !== 1 ? 's' : ''}.`, success: true });
+    } else {
+      res.status(400).json({ mensaje: 'Ocurrio un error al guardar las respuestas', success: false });
+    }
+  } catch (error) {
+    res.status(400).json({ mensaje: 'Ocurrio un error al crear las respuestas', success: false, error });
+  }
+}
+
+export const createAnswersByDate = async (req, res) => {
+  try {
+    let updates = 0;
+    const result = await Promise.all(req.body.map(async ({ participante_id, question_id, answer_value, answer_createdAt }) => {
+      const [answer, created] = await db.Answer.findOrCreate({
+        where: { participante_id, question_id, answer_createdAt: sequelize.fn('date', answer_createdAt) },
         defaults: { participante_id, question_id, answer_value }
       });
       if (!created) {

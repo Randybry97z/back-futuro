@@ -11,6 +11,8 @@ answerRoutes.get('/:id', [verifyToken], controller.getAnswer);
 answerRoutes.put('/:id', [verifyToken], controller.updateAnswer);
 answerRoutes.delete('/:id', [verifyToken], controller.deleteAnswer);
 answerRoutes.post('/save-answers',  controller.createAnswers);
+answerRoutes.get('/p/:id', controller.getAnswersByPid);
+answerRoutes.post('/save-answers-by-date', controller.createAnswersByDate);
 
 export const PREFIX = '/answer';
 export const ROUTER = answerRoutes;
