@@ -8,6 +8,7 @@ historyRoutes.get('/', [verifyToken], controller.getInstitutionalizationHistorie
 historyRoutes.post('/', [verifyToken], controller.createInstitutionalizationHistory);
 historyRoutes.get('/:id', [verifyToken], controller.getInstitutionalizationHistory);
 historyRoutes.put('/:id', [verifyToken], controller.updateInstitutionalizationHistory);
+historyRoutes.patch('/:id', [verifyToken], controller.patchInstitutionalizationHistory);
 historyRoutes.delete('/:id', [verifyToken], controller.deleteInstitutionalizationHistory);
 
 export const PREFIX = '/institucionalization_history';
