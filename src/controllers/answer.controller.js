@@ -27,8 +27,8 @@ export const getAnswersByParticipant = async (req, res) => {
 
 export const createAnswer = async (req, res) => {
   try {
-    const { participante_id, question_id, answer_value } = req.body;
-    const answer = await db.Answer.create({ participante_id, question_id, answer_value });
+    const { participante_id, question_id, answer_value, answer_createdAt } = req.body;
+    const answer = await db.Answer.create({ participante_id, question_id, answer_value, answer_createdAt });
     if (answer) {
       res.status(201).json({ data: answer, mensaje: 'Respuesta agregada con exito', success: true });
     } else {
