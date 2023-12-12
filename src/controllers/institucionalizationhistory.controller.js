@@ -120,6 +120,28 @@ export const updateInstitutionalizationHistory = async (req, res) => {
   }
 };
 
+export const patchInstitutionalizationHistory = async (req, res) => {
+  try {
+    const institutionalization_history = await db.InstitutionalizationHistory.update(req.body, {
+      where: { history_id: req.params.id },
+    });
+    if (institutionalization_history[0]) {
+      res
+        .status(200)
+        .json({ mensaje: "Usuario actualizado con exito", success: true });
+    } else {
+      res
+        .status(400)
+        .json({ mensaje: "No existe la historia de institucionalización", success: false });
+    }
+  } catch (error) {
+    res.status(400).json({
+      mensaje: "Ocurrio un error al actualizar los datos",
+      success: false,
+    });
+  }
+};
+
 export const deleteInstitutionalizationHistory = async (req, res) => {
   try {
     const institutionalization_history = await db.InstitutionalizationHistory.destroy({
