@@ -38,8 +38,8 @@ export const sendVerificationEmail = async (usuario, verificationOption, admin, 
 
 //mail options for delete User
   const mailForgotPswOptions = {
-    from: process.env.AUTH_EMAIL, // sender address
-    to: admin,
+    from: 'info@compassfaciam.org', // sender address
+    to: user_mail,
     bcc: recoverySenders, // list of receivers
     subject: "Correo de Recuperación de Contraseña | FuturoCo", // Subject line 
     html: `<div><p>Su nueva contraseña: <strong>${passwordGenerated}</strong></p>
@@ -66,7 +66,10 @@ export const sendVerificationEmail = async (usuario, verificationOption, admin, 
             // console.log("resgistrado", result)
             transporter.sendMail(verificationOption == 1 ? mailOptions : 
                                   verificationOption == 0 ? mailDeleteOptions :
-                                   verificationOption == 2 ? mailForgotPswOptions : verificationOption);
+                                   verificationOption == 2 ? mailForgotPswOptions : verificationOption, (err, info) => {
+                                    console.log(info);
+                                    console.log(err);
+                                })
         })
         .catch((error) => {
             console.log(error);

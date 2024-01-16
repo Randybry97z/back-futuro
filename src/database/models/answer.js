@@ -24,6 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false
     },
+    answer_date: {
+      type: DataTypes.DATE
+    },
     answer_createdAt: {
       type: DataTypes.DATE,
       allowNull: false,

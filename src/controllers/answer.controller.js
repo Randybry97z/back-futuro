@@ -91,14 +91,14 @@ export const deleteAnswer = async (req, res) => {
 export const createAnswers = async (req, res) => {
   try {
     let updates = 0;
-    const result = await Promise.all(req.body.map(async ({ participante_id, question_id, answer_value }) => {
+    const result = await Promise.all(req.body.map(async (participante_id, question_id, answer_value, answer_date) => {
       const [answer, created] = await db.Answer.findOrCreate({
         where: { participante_id, question_id },
-        defaults: { participante_id, question_id, answer_value }
+        defaults: { participante_id, question_id, answer_value, answer_date }
       });
       if (!created) {
-        if (answer.answer_value !== answer_value) {
-          const updated = await db.Answer.update({ answer_value }, { where: { answer_id: answer.answer_id } });
+        if (answer.answer_value !== answer_value || answer.answer_date !== answer_date) {
+          const updated = await db.Answer.update({ answer_value, answer_date }, { where: { answer_id: answer.answer_id } });
           if (updated[0]) updates++;
         }
       }

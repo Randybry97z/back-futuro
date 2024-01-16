@@ -1,13 +1,14 @@
 const nodemailer = require("nodemailer");
 
 export const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  host: "smtp.hostinger.com",
+secure: false,
+requireTLS: true,
+port: 587,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: 'douglasskick17@gmail.com',
-    pass: 'pefc uyeq xgdz btcm'
+    user: 'info@compassfaciam.org',
+    pass: '23:FuturoAndCo'
   }
 });
 
